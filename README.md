@@ -6,7 +6,8 @@ CI2214 Web Development 1 group project. Customers browse stations and reserve on
 
 ## Current status
 
-The application and Task 1/2 recorded tests are included. Task 3 database design, ERD, full data dictionary and four report-query explanations are prepared from the checked-in SQL. The project owner now reports that the tests work, without additional screenshots/logs or itemized results. Final contribution confirmation, the Task 2 name/ID and real repository URL remain to be supplied. Existing observed passes and new user-reported results are distinguished in the test records.
+The application and Task 1/2 recorded tests are included. Task 3 database design, ERD, full data dictionary and four report-query explanations are prepared from the checked-in SQL. The project owner now reports that the tests work, without additional screenshots/logs or itemized results. Final contribution confirmation, the Task 2 Muhammad Wafirul Asyraf bin Seriman (B20250513)
+ (https://github.com/Wafflefirul25/levelup-cafe.git) remain to be supplied. Existing observed passes and new user-reported results are distinguished in the test records.
 
 ## Folder guide
 
@@ -38,7 +39,7 @@ See [test results](readMe/04-TEST-CHECKLIST.md), [Task 2 details](readMe/07-TASK
 ## Group and submission
 
 - Task 1: Zaenudin Nasmi Bin Adi Rupawan (B20250508).
-- Task 2: Muhammad Wafirul Asyraf bin Seriman (B20250513).
+- Task 2: Muhammad Wafirul Asyraf bin Seriman (B20250513)
 - Task 3: Muhammad Zainul Abidin Bin Haji Jabidi (B20250211).
 
 Confirm actual work in [contributions](readMe/05-CONTRIBUTIONS.md). The shared report contains the concise AI acknowledgement. Complete [remaining submission items](readMe/09-FINAL-SUBMISSION.md) before uploading. Presentation is handled separately.
