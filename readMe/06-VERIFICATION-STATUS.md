@@ -39,8 +39,16 @@ Evidence is under EVIDENCE/task1/ and EVIDENCE/Task 2/. Duplicate-seat-label scr
 
 ## Database and documentation status
 
-The schema contains four tables; bookings references customers and seats. Additional SQL queries for overall confirmed booking value, category totals and detailed bookings are present. Their execution/results and final database ownership still require Task 3 confirmation. Booking value is not proof of payment or received revenue.
+The schema contains four tables; bookings references customers and seats. Additional SQL queries for overall confirmed booking value, category totals and detailed bookings are present. The ERD, full data dictionary and four SQL explanations are now prepared in task-3/docs/. New execution/results and final database acceptance still require Task 3 confirmation. Booking value is not proof of payment or received revenue.
 
-Task 1 write-up and selected Task 2 results have been incorporated into the updated Word report supplied separately. No Word/PDF report is included in the current source ZIP. Confirm the Task 2 member name/ID, repository URL and actual contributions, and finish Task 3 report sections before final submission. Some historical task-folder handoff wording remains provisional.
+The consolidated Word report and matching PDF are included under report/, with Task 1/2 results and source-grounded Task 3 design/query documentation. Confirm the Task 2 member name/ID, repository URL and actual contributions, and finish Task 3 report sections before final submission. Some historical task-folder handoff wording remains provisional.
 
 Task 1 owns customer interface and responsive evidence; Task 2 owns PHP processing, authentication and administrator review; Task 3 owns final database design, SQL and reporting review. All members must reconcile compiled files and run final acceptance checks. Testing a teammate's functionality does not transfer authorship. Selected successful tests do not establish comprehensive security, concurrency safety or whole-group completion.
+
+## Assembly verification
+
+Runtime PHP, CSS, JavaScript and SQL were preserved from the supplied version (4). Evidence filenames/content were preserved, with the duplicate-label folder renamed to match documentation. The package includes 82 existing screenshots; new Task 3 evidence has not been supplied. No new PHP/MySQL execution is claimed during assembly.
+
+## Latest user-reported update
+
+The project owner reports that the tests work. No additional test screenshots, logs or individual result tables were supplied with this update. This statement is user-reported, not an independently observed acceptance result. Existing Task 1/2 screenshots remain the evidence for their recorded cases. Earlier Pending/Not run labels describe the previously supplied record, rather than independently established current execution status. No extra evidence files are fabricated.

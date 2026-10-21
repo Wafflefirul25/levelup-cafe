@@ -58,7 +58,7 @@ Evidence is under `EVIDENCE/Task 2/`. These are selected observed cases, not com
 
 The earlier folder `Conflict same seat` has been renamed `Duplicate seat label`; those images concern seat creation, not overlapping reservations. During a separate initial CSRF attempt, an unchanged form created LU-4, a repeat interval was rejected and LU-4 was deleted. Those separate conversation captures are not included in this evidence folder; retain them if citing that sequence.
 
-## Remaining tests
+## Additional cases without individual supplied results
 
 | Test | Status |
 | --- | --- |
@@ -83,8 +83,16 @@ The earlier folder `Conflict same seat` has been renamed `Duplicate seat label`;
   development tooling; its removal has not been verified.
 - Database credentials must remain local and must not be committed.
 - Task 2 must review the PHP/security implementation.
-- Task 3's final database and reporting review is still pending.
+- Task 3 design documentation is prepared under task-3/docs/. Actual new SQL/import results and final review remain pending.
 - Passing these tests does not mean all assignment checks are complete.
 ## Documentation status
 
 The tester reports completion of the Task 1 write-up. This checklist records the specific demonstrated test results available for review. Completion of the write-up does not change an unrecorded test into a passed test. Tasks 2 and 3 retain responsibility for their final implementation reviews and contribution statements.
+
+## Task 3 handoff
+
+See ../task-3/TEST-RECORD.md for actual-result fields. The ERD, dictionary and report explanations are complete descriptions of the existing source, not proof of new local tests. Existing Task 1/2 passes remain unchanged.
+
+## Latest user-reported update
+
+The project owner reports that the tests work. No additional test screenshots, logs or individual result tables were supplied with this update. This statement is user-reported, not an independently observed acceptance result. Existing Task 1/2 screenshots remain the evidence for their recorded cases. Earlier Pending/Not run labels describe the previously supplied record, rather than independently established current execution status. No extra evidence files are fabricated.

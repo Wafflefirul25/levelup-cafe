@@ -2,7 +2,7 @@
 
 ## Current handoff status
 
-Selected Task 2 acceptance tests were performed in Windows/XAMPP and Chrome on 21 October 2026 by Zaenudin Nasmi Bin Adi Rupawan (B20250508). Screenshots document the revised application running locally. The results below distinguish observed passes from checks not yet performed. Task 2 report integration, confirmed group contribution details and final database integration remain separate handoff work.
+Selected Task 2 acceptance tests were performed in Windows/XAMPP and Chrome on 21 October 2026 by Zaenudin Nasmi Bin Adi Rupawan (B20250508). Screenshots document the revised application running locally. The results below distinguish observed passes from checks not yet performed. Task 2 explanations and selected evidence are included in the consolidated report under report/. Confirmed group contribution details and final assembled-database verification remain separate handoff work.
 
 ## Files and ownership
 
@@ -80,7 +80,7 @@ Evidence paths below are relative to `EVIDENCE/Task 2/`. “Passed” describes 
 
 During the initial attempt to locate the CSRF token, an unchanged valid form created LU-4 for seat #5 on 24 October 2026, 14:00–15:00, at BND 4.50. A subsequent request for that interval was rejected as already reserved. LU-4 was then deleted, leaving LU-1 and the original report total intact. This sequence was supplied separately in the testing conversation; it is not the duplicate-seat-label case and is not the completed CSRF test. Retain those screenshots separately if citing that overlap result in the final report.
 
-### Checks not yet performed or fully evidenced
+### Checks without individual supplied evidence
 
 | Check | Status |
 | --- | --- |
@@ -119,3 +119,7 @@ PHP and MySQL were unavailable in the assistant preparation environment, but sub
 
 The original PHP files remain attributed to the Task 2 member who supplied them. AI assistance produced proposed revisions and documentation. Zaenudin Nasmi Bin Adi Rupawan performed the recorded local installation and manual tests while working through Task 2. The group must confirm final Task 2 authorship and names/IDs according to actual reviewed changes. Testing another member’s functionality does not transfer authorship automatically.
 
+
+## Latest user-reported update
+
+The project owner reports that the tests work. No additional test screenshots, logs or individual result tables were supplied with this update. This statement is user-reported, not an independently observed acceptance result. Existing Task 1/2 screenshots remain the evidence for their recorded cases. Earlier Pending/Not run labels describe the previously supplied record, rather than independently established current execution status. No extra evidence files are fabricated.
