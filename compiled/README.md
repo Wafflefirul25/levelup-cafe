@@ -1,5 +1,7 @@
-# Current assembled application
+# Assembled application
 
-Run this folder through PHP/Apache after setup. Customer pages are Task 1 work; PHP handlers/admin revisions and database/report proposals are integration drafts for Task 2/Task 3 review. Their presence does not mean either teammate has completed or tested them.
+Run this directory through Apache/PHP after following ../readMe/01-SETUP.md. This is the functional website, with customer pages, booking processing, authentication, seat creation, booking cancellation/deletion and daily reporting.
 
-See ../readMe/01-SETUP.md. Runtime acceptance tests remain pending. Keep this folder synchronized manually when reviewed task files change. Do not copy all original Task 2 files over it: the original index is a test page, and the original authentication uses a different password column.
+Selected user-run XAMPP tests are recorded in ../readMe/04-TEST-CHECKLIST.md and 07-TASK-2-IMPLEMENTATION-AND-TESTS.md. Additional edge cases and final database/package acceptance are distinguished from those observed results. Task 3 documentation is under ../task-3/. Runtime source is unchanged from the supplied version (4).
+
+Do not copy the historical originals over this directory: the old index is a test page and old authentication expects a different password column. Keep local config.local.php out of version control.
