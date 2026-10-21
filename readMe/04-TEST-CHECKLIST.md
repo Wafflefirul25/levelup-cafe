@@ -1,37 +1,72 @@
-# Acceptance tests — NOT RUN
+# Acceptance test results
 
-Run on a fresh test database. Record date, tester, browser, actual result and evidence. Never mark expected results as observed results.
+Test date: 21 October 2026
+Environment: Windows, XAMPP, Chrome, local compiled application
+Tester: [Enter your full name]
 
-| Test | Action | Expected |
+These results record manual testing. Untested features remain pending.
+
+## Completed tests
+
+| Test | Actual result | Status |
 | --- | --- | --- |
-| Setup | Import SQL; create admin | Four tables; four seats; hashed admin credential |
-| Navigation | Follow all four main links and footer login | Correct page, active main link, no broken assets |
-| Responsive | Inspect at 360/390/768/1366px | Readable text/forms/nav; tables scroll in container |
-| Keyboard | Tab through links/forms/details | Visible focus; labels and skip link work |
-| Filter | Choose Premium on seat page | Only Premium cards visible |
-| Price | PC-01, two hours | Estimate B$6; server confirmation B$6 |
-| Valid booking | Future date, PC-01, 14:00, 2 hours | One booking, correct customer/seat, LU reference |
-| Conflict | Same date/seat at 15:00 for one hour | Rejected without extra booking |
-| Adjacent | Same date/seat at 16:00 | Accepted when prior booking ends at 16:00 |
-| Other seat | Same interval on PC-02 | Accepted |
-| Closing time | 21:00 for 2 hours | Rejected by JS and by server with JS disabled |
-| Tampering | Alter price or submit invalid seat/hours/email/past date | Server ignores client price and rejects invalid input |
-| Repeated email | Use existing email again | Existing customer linked; no duplicate email row |
-| Concurrency | Two separate sessions submit same seat/interval together | Only one booking commits; second rejected or safely fails |
-| CSRF | Missing or wrong token | HTTP 403; no mutation |
-| Invalid login | Wrong credentials five times | Generic error and per-session cooldown |
-| Direct access | Open admin dashboard signed out | Redirect to login |
-| Admin CRUD | Create booking, view, cancel, delete | Record appears, updates, then is removed |
-| Create seat | Valid and duplicate label submissions | Valid added; duplicate handled without raw SQL error |
-| Report | Two confirmed bookings B$6/B$5 on same day | 2 sessions, B$11 booked value |
-| Cancel/report | Cancel B$6 booking | 1 session, B$5; cancelled slot can be booked again |
-| Logout | Submit dashboard logout; revisit dashboard | Session removed; protected page unavailable |
-| DB outage | Stop MySQL and load seats/login | Friendly error; no raw connection details |
-| No JavaScript | Disable JS and book | Native validation and all server checks still operate |
+| Database import | SQL imported successfully and four sample seats were inserted. | Passed |
+| Database connection | Initially failed because the connection sent no password. After correcting local credentials, all four seats loaded. | Passed after configuration fix |
+| Navigation | Home, Seats & rates, Book a session, About and administrator login pages opened. Active main links were highlighted. | Passed |
+| Price calculation | PC-01 for two hours displayed B$6 estimated total and B$6 in the confirmation. | Passed |
+| Create booking | PC-01 on 22 October 2026, 14:00–16:00, was saved as LU-1. Database record matched the confirmation. | Passed |
+| Overlapping booking | PC-01 on the same date, 15:00–16:00, was rejected. No extra booking was inserted. | Passed |
+| Adjacent booking | PC-01 on the same date, 16:00–17:00, was accepted as LU-2 for B$3. | Passed |
+| Administrator login | Correct credentials opened the dashboard and displayed stored bookings. | Passed |
+| View records | Dashboard displayed LU-1 and LU-2 with their times, prices and statuses. | Passed |
+| Daily report | Two confirmed bookings worth B$6 and B$3 produced 2 sessions and B$9 booked value. | Passed |
+| Update through cancellation | Cancelling LU-2 changed its status to cancelled while retaining the record. Report changed to 1 session and B$6. | Passed |
+| Delete booking | Deleting cancelled LU-2 removed it from the dashboard and database. LU-1 remained; report stayed at 1 session and B$6. | Passed |
+| Logout and protected access | After logout, opening admin_dashboard.php directly redirected to login without displaying bookings. | Passed |
+| Login again | Correct credentials restored dashboard access after logout. | Passed |
+| Incorrect password | An incorrect password displayed a generic error and did not open the dashboard. | Passed |
+| Required-field validation | Submitting an empty form displayed the browser's required-field message. | Passed |
+| Email validation | Entering abc as the email displayed the browser's invalid-email message. | Passed |
+| Closing-time JavaScript validation | A 21:00 start for two hours displayed the message requiring sessions to end by 22:00. | Passed |
+| Invalid attempts and database | After the validation tests, only the original LU-1 booking remained. | Passed |
+| Responsive layout | Narrow and wider previews showed readable content, stacked or multi-column cards, and appropriately arranged form fields across all four customer pages. Exact tested widths must be entered below. | Visually checked |
+| FAQ controls | About-page questions expanded and collapsed; visible answers fitted the layout. | Passed |
 
-## Local syntax checks
-On Windows PowerShell from Level-Up:
-```powershell
-Get-ChildItem task-1,compiled -Recurse -Filter *.php | ForEach-Object { & C:\xampp\php\php.exe -l $_.FullName }
-```
-The preserved Task 2 originals intentionally retain their original issues. Do not run them as the submitted application. PHP lint is necessary but does not replace database/browser tests.
+## Responsive test dimensions
+
+Enter only dimensions actually selected in Chrome's device toolbar.
+
+- Narrow preview: [enter width] × [enter height] pixels
+- Additional narrow preview: [enter width, or not tested]
+- Wider preview: [enter width] × [enter height] pixels
+
+Most screenshots exclude the dimensions toolbar, so their exact widths
+cannot be established from the screenshots alone.
+
+## Remaining tests
+
+| Test | Status |
+| --- | --- |
+| Premium category filter | Not yet recorded |
+| Keyboard navigation, focus and skip link | Not run |
+| Same interval on a different seat | Not run |
+| Booking a cancelled interval again | Not run |
+| Simultaneous requests for the same seat and interval | Not run |
+| Missing or invalid CSRF token | Not run |
+| Tampered form requests and server-side validation | Not run |
+| Closing-time rejection with JavaScript disabled | Not run |
+| Five incorrect logins and cooldown | Not run |
+| Create seat and duplicate-label handling | Not run |
+| Controlled database-outage test | Not run |
+| Customer-table check for duplicate emails | Not run |
+| Local PHP syntax checks | Not run |
+
+## Notes
+
+- Screenshots provide evidence for the completed manual tests.
+- The observed live-reload WebSocket error appeared to originate from
+  development tooling; its removal has not been verified.
+- Database credentials must remain local and must not be committed.
+- Task 2 must review the PHP/security implementation.
+- Task 3's final database and reporting review is still pending.
+- Passing these tests does not mean all assignment checks are complete.
