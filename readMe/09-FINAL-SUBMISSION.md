@@ -6,12 +6,12 @@ The runnable compiled website, preserved Task 1/2 source and originals, reviewed
 
 ## Remaining required information and confirmation
 
-1. Confirm the Task 2 member's full name and student ID. Replace the placeholders on the report cover and in Section 12, root README and readMe/05-CONTRIBUTIONS.md.
-2. Insert the actual repository URL in report Section 12 and readMe/05-CONTRIBUTIONS.md.
-3. Confirm actual member contributions. The project owner reports tests working, but has not supplied additional screenshots/logs or itemized query results. The report records this as user-reported. Keep existing evidence and do not invent outputs. Additional screenshots are only needed if the assignment explicitly requires them or the group wishes to substantiate new claims.
-4. Confirm final contributions from each member. Browsing the website alone is not evidence of database review or SQL execution.
-5. Confirm the downloaded package corresponds to the version you tested. Source code is unchanged from version (4); only organization/documentation was updated. If any runtime code or SQL is changed afterward, recheck the affected workflow. Preserve existing evidence data.
-6. After changing the DOCX, export a fresh matching PDF. The included PDF corresponds to the current report, before missing details/new results are filled. Check contents page numbers and figure placement after edits.
+
+1. Insert(https://github.com/Wafflefirul25/levelup-cafe.git) in report Section 12 and readMe/05-CONTRIBUTIONS.md.
+2. Confirm actual member contributions. The project owner reports tests working, but has not supplied additional screenshots/logs or itemized query results. The report records this as user-reported. Keep existing evidence and do not invent outputs. Additional screenshots are only needed if the assignment explicitly requires them or the group wishes to substantiate new claims.
+3. Confirm final contributions from each member. Browsing the website alone is not evidence of database review or SQL execution.
+4. Confirm the downloaded package corresponds to the version you tested. Source code is unchanged from version (4); only organization/documentation was updated. If any runtime code or SQL is changed afterward, recheck the affected workflow. Preserve existing evidence data.
+5. After changing the DOCX, export a fresh matching PDF. The included PDF corresponds to the current report, before missing details/new results are filled. Check contents page numbers and figure placement after edits.
 
 ## GitHub
 

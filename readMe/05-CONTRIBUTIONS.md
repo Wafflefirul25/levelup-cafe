@@ -8,7 +8,7 @@ Assigned customer interface, navigation, responsive design and interface documen
 
 ## Task 2
 
-Full name and student ID: awaiting confirmation.
+ Muhammad Wafirul Asyraf bin Seriman (B20250513).
 
 The supplying member provided the original five PHP files preserved in task-2/original/. Revised entry points are under task-2/proposed-revised/ and compiled/. Confirm which revisions the member actually reviewed or changed before claiming them. Zaenudin performed the recorded subsequent Task 2 local tests and upload steps. Additional optional unperformed checks remain listed in the test records.
 
@@ -24,4 +24,4 @@ AI assisted with initial interface code, integration revisions and documentation
 
 ## Repository
 
-Repository URL: [Insert actual GitHub repository URL]. Confirm names/IDs and actual contributions here and in report Section 12 before final submission.
+Repository URL: (https://github.com/Wafflefirul25/levelup-cafe.git). 
