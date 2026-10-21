@@ -1,0 +1,20 @@
+Table,Column,SQL type,Nullable,Constraint or default,Purpose
+customers,id,INT,No,PK; AUTO_INCREMENT,Customer identifier
+customers,name,VARCHAR(100),No,—,Stored customer name
+customers,email,VARCHAR(190),No,UNIQUE,Customer lookup and reuse
+seats,id,INT,No,PK; AUTO_INCREMENT,Seat identifier
+seats,label,VARCHAR(50),No,UNIQUE,Public station label
+seats,category,"ENUM('Standard','Premium')",No,—,Station category
+seats,hourly_rate,"DECIMAL(7,2)",No,—,Price per hour in BND
+seats,active,TINYINT(1),No,DEFAULT 1,Included in active listings when 1
+bookings,id,INT,No,PK; AUTO_INCREMENT,Booking reference number
+bookings,customer_id,INT,No,FK → customers.id,Customer for reservation
+bookings,seat_id,INT,No,FK → seats.id,Reserved station
+bookings,start_at,DATETIME,No,—,Session start
+bookings,end_at,DATETIME,No,—,Session end
+bookings,total,"DECIMAL(9,2)",No,—,Stored value calculated at booking
+bookings,status,"ENUM('confirmed','cancelled')",No,DEFAULT 'confirmed',Reservation status
+bookings,created_at,TIMESTAMP,No,DEFAULT CURRENT_TIMESTAMP,Record creation time
+admins,id,INT,No,PK; AUTO_INCREMENT,Administrator identifier
+admins,username,VARCHAR(100),No,UNIQUE,Login name
+admins,password_hash,VARCHAR(255),No,—,Password hash; no plaintext password
