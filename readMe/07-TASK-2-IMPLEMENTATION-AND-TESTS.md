@@ -68,7 +68,7 @@ Evidence paths below are relative to `EVIDENCE/Task 2/`. “Passed” describes 
 | Cancellation | LU-3 remained with cancelled status; the 23 October report row was excluded. LU-1 remained unchanged. | Passed | Admin new book,cancel,delete |
 | Deletion | LU-3 disappeared from the dashboard. The remaining report showed 22 October, one session and BND 6. | Passed | Admin new book,cancel,delete |
 | Create seat | QA-PC-01 was created as Standard and appeared in the public listing at BND 4.50/hour. | Passed | New seat created |
-| Duplicate seat label | Submitting QA-PC-01 again produced a unique-label conflict message. LU-1 and report totals remained visible. | Passed | Conflict same seat |
+| Duplicate seat label | Submitting QA-PC-01 again produced a unique-label conflict message. LU-1 and report totals remained visible. | Passed | Duplicate seat label |
 | Incorrect password | Generic invalid-credentials error; login page remained visible. | Passed | Invalid password |
 | Cooldown and recovery | After the instructed repeated failures, a one-minute wait message appeared. A later correct login opened the dashboard. Exact duration was not independently timed. | Observed blocking and recovery | Multiple invalid credentials |
 | Logout/protected access | Following logout and the instructed direct dashboard request, login.php appeared with no booking data. Screenshots show the resulting login page; request sequence is based on the tester's execution. | Observed result | Logged out |
@@ -97,7 +97,7 @@ During the initial attempt to locate the CSRF token, an unchanged valid form cre
 
 ### Evidence labels
 
-The folder named `Conflict same seat` shows duplicate **seat-label creation**, not overlapping time-slot booking. Its current name is retained to match the uploaded evidence; use the accurate description in captions and test results. The evidence ZIP contains screenshots, not a database export. A visible dashboard row or total establishes the observed output, not a complete database integrity audit.
+The original folder `Conflict same seat` has been renamed `Duplicate seat label`. It shows duplicate seat-label creation, not overlapping time-slot booking. Screenshot contents are unchanged. The evidence ZIP contains screenshots, not a database export. Visible dashboard rows and totals establish observed output, not a complete database integrity audit.
 
 Use a disposable test database if you do not want QA seats or bookings mixed with existing evidence. The dashboard does not delete seats; database cleanup belongs to the database owner.
 

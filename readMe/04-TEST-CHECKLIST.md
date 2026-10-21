@@ -34,9 +34,29 @@ These results record manual testing. Untested features remain pending.
 
 ## Responsive layout evidence
 
-Evidence is organized in EVIDENCE.zip under 360E, 390E and 768E, representing the user's labelled preview-width groups (360, 390 and 768 pixels). Screenshots cover the four customer pages in narrow and wider layouts, including stacked cards, form fields, navigation and expandable FAQs.
+Evidence is organized under `EVIDENCE/task1/360E`, `EVIDENCE/task1/390E` and `EVIDENCE/task1/768E`, representing the user's labelled preview-width groups (360, 390 and 768 pixels). Screenshots cover the four customer pages in narrow and wider layouts, including stacked cards, form fields, navigation and expandable FAQs.
 
 Most captures exclude the device toolbar. The folder labels identify the intended width groups; exact viewport measurements and heights are not independently established by the images. Heights were not consistently recorded. No height has been invented.
+
+## Task 2 revision: additional recorded results
+
+Evidence is under `EVIDENCE/Task 2/`. These are selected observed cases, not comprehensive security or database-integrity verification.
+
+| Test | Actual result | Status |
+| --- | --- | --- |
+| Seat creation and retrieval | QA-PC-01 appeared as Standard at BND 4.50/hour. | Passed |
+| Duplicate seat label | Creating QA-PC-01 again produced a friendly unique-label error; existing records stayed visible. | Passed |
+| Booking creation and pricing | QA-PC-01, 23 October 2026, 14:00–16:00, created LU-3 for BND 9. | Passed |
+| Read, cancel and delete | LU-3 appeared confirmed, remained after cancellation, then disappeared after deletion. | Passed |
+| Report changes | Cancelling LU-3 excluded its 23 October report row; deleting it left LU-1 and one session/BND 6. | Passed |
+| Incorrect password | Generic error; dashboard did not open. | Passed |
+| Login cooldown and recovery | Repeated failures produced the one-minute wait message; later correct login succeeded. Exact elapsed time was not independently measured. | Observed |
+| Logout and protected access | After the instructed logout/direct-dashboard sequence, login.php appeared without booking data. Request sequence is based on tester execution. | Observed |
+| PHP closing-time validation | In the instructed JavaScript-disabled test, 21:00 for two hours returned “Sessions must finish by 22:00.” Captures show the server message, not the DevTools setting. | Passed for this case |
+| Altered booking CSRF token | Setting the hidden token to invalid-test produced the invalid-token message. Final dashboard still showed LU-1 and one session/BND 6. | Passed for booking form |
+| Local PHP syntax | XAMPP lint showed no syntax errors in 15 compiled PHP files, including local configuration. | Passed |
+
+The earlier folder `Conflict same seat` has been renamed `Duplicate seat label`; those images concern seat creation, not overlapping reservations. During a separate initial CSRF attempt, an unchanged form created LU-4, a repeat interval was rejected and LU-4 was deleted. Those separate conversation captures are not included in this evidence folder; retain them if citing that sequence.
 
 ## Remaining tests
 
@@ -44,17 +64,17 @@ Most captures exclude the device toolbar. The folder labels identify the intende
 | --- | --- |
 | Premium category filter | Not yet recorded |
 | Keyboard navigation, focus and skip link | Not run |
-| Same interval on a different seat | Not run |
-| Booking a cancelled interval again | Not run |
+| Same interval on a different seat; rebooking a cancelled interval | Not run |
 | Simultaneous requests for the same seat and interval | Not run |
-| Missing or invalid CSRF token | Not run |
-| Tampered form requests and server-side validation | Not run |
-| Closing-time rejection with JavaScript disabled | Not run |
-| Five incorrect logins and cooldown | Not run |
-| Create seat and duplicate-label handling | Not run |
+| Missing booking CSRF token | Not run; altered token was tested |
+| CSRF rejection on administrator actions, login and logout | Not run |
+| Independent HTTP 403 status capture | Not recorded |
+| Tampered admin rate 4.555, zero rate and invalid category | Not run |
+| Missing/non-positive action IDs and already-cancelled actions | Not run |
+| Other tampered booking inputs beyond the recorded closing-time case | Not run |
 | Controlled database-outage test | Not run |
 | Customer-table check for duplicate emails | Not run |
-| Local PHP syntax checks | Not run |
+| Clean installation and compatibility with final Task 3 SQL | Pending |
 
 ## Notes
 

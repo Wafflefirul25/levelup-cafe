@@ -1,7 +1,7 @@
 # Level Up
 ## Design and Development of a Web-Based Gaming Café Seat and Time Slot Booking System
 
-WD1 group coursework. Task 1 documentation and recorded manual testing are complete. Task 2 implementation review and Task 3 final database/report delivery remain pending. See `readMe/04-TEST-CHECKLIST.md` for completed and unverified tests.
+WD1 group coursework. Task 1 documentation and recorded manual testing are complete. Selected Task 2 tests are also recorded, including seat creation, duplicate-label handling, booking CRUD, PHP syntax, login cooldown, server closing-time validation and altered booking-token rejection. Task 2 final contribution confirmation, remaining edge-case checks and Task 3 final database/report review remain pending. See `readMe/04-TEST-CHECKLIST.md` and `readMe/07-TASK-2-IMPLEMENTATION-AND-TESTS.md` for results and limitations.
 
 | Folder | Purpose |
 | --- | --- |
