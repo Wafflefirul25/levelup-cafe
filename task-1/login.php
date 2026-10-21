@@ -1,0 +1,1 @@
+<?php $title='Admin integration'; require 'includes/header.php'; ?><h1>Administrator access</h1><p>Task 2 owns administrator authentication. Use the compiled project to access the integrated login.</p><?php require 'includes/footer.php'; ?>

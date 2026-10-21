@@ -1,0 +1,1 @@
+</main><footer><strong>LEVEL UP</strong><p>One seat. Your time. Your game.</p><a href="login.php">Administrator login</a><p>Coursework prototype · Rates and opening hours are illustrative.</p></footer></body></html>

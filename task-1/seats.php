@@ -1,0 +1,6 @@
+<?php $title='Seats & rates'; require 'includes/header.php'; $rows=[]; $error=false; try { $rows=seats(); } catch (PDOException $ex) { error_log($ex->getMessage()); $error=true; } ?>
+<p class="eyebrow">FIND YOUR SETUP</p><h1>Seats & hourly rates</h1><p>These are active stations. Availability depends on the date and time you book.</p>
+<label for="category">Filter by category</label><select id="category"><option value="all">All stations</option><option>Standard</option><option>Premium</option></select>
+<?php if($error): ?><p class="notice" role="alert">Seat data is unavailable. Please try again later or ask the administrator to check database setup.</p><?php elseif(!$rows): ?><p>No active stations have been added yet.</p><?php endif; ?>
+<div class="cards" id="seat-list"><?php foreach($rows as $s): ?><article data-category="<?= e($s['category']) ?>"><p class="eyebrow"><?= e($s['category']) ?></p><h2><?= e($s['label']) ?></h2><p class="price">B$<?= e(number_format((float)$s['hourly_rate'],2)) ?><small> / hour</small></p><a class="button" href="booking.php?seat=<?= (int)$s['id'] ?>">Choose this seat</a></article><?php endforeach; ?></div>
+<?php require 'includes/footer.php'; ?>
