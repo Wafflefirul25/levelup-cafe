@@ -38,7 +38,7 @@ See [test results](readMe/04-TEST-CHECKLIST.md), [Task 2 details](readMe/07-TASK
 ## Group and submission
 
 - Task 1: Zaenudin Nasmi Bin Adi Rupawan (B20250508).
-- Task 2: Muhammad Wafirul Asyraf bin Seriman (B20250513)n.
+- Task 2: Muhammad Wafirul Asyraf bin Seriman (B20250513).
 - Task 3: Muhammad Zainul Abidin Bin Haji Jabidi (B20250211).
 
 Confirm actual work in [contributions](readMe/05-CONTRIBUTIONS.md). The shared report contains the concise AI acknowledgement. Complete [remaining submission items](readMe/09-FINAL-SUBMISSION.md) before uploading. Presentation is handled separately.
